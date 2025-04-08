@@ -1,13 +1,19 @@
+// Import package Flutter Material Design
 import 'package:flutter/material.dart';
+// Import halaman quiz dan article
 import 'quiz_screen.dart';
 import 'article_screen.dart';
 
+// Widget HomeScreen yang merupakan StatelessWidget
+// StatelessWidget digunakan karena tampilan tidak akan berubah berdasarkan state internal
 class HomeScreen extends StatelessWidget {
+  // Constructor dengan parameter key opsional
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // AppBar dengan judul aplikasi
       appBar: AppBar(
         title: const Center(
           child: Text(
@@ -18,20 +24,23 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        backgroundColor: Color(0xFFFF9B17),
-        automaticallyImplyLeading: false,
-        elevation: 4.0,
+        backgroundColor: Color(0xFFFF9B17), // Warna oranye untuk AppBar
+        automaticallyImplyLeading: false, // Menghilangkan tombol back
+        elevation: 4.0, // Memberikan efek bayangan pada AppBar
       ),
+      // Body utama aplikasi
       body: Container(
         height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(color: Color(0xFF1E3A8A)),
+        decoration: const BoxDecoration(
+          color: Color(0xFF1E3A8A),
+        ), // Background biru navy
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 20),
 
-              // CARD BARU: Info Fakultas Vokasi
+              // Card informasi Fakultas Vokasi
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Card(
@@ -39,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Gambar Fakultas Vokasi
+                      // Gambar Fakultas Vokasi dengan efek rounded corners
                       ClipRRect(
                         borderRadius: const BorderRadius.vertical(
                           top: Radius.circular(8),
@@ -51,6 +60,7 @@ class HomeScreen extends StatelessWidget {
                           height: 150,
                         ),
                       ),
+                      // Deskripsi Fakultas Vokasi
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -58,6 +68,7 @@ class HomeScreen extends StatelessWidget {
                           textAlign: TextAlign.justify,
                         ),
                       ),
+                      // Tombol untuk membaca artikel lebih lanjut
                       Align(
                         alignment: Alignment.centerRight,
                         child: Padding(
@@ -82,17 +93,17 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // SCROLL HORIZONTAL UNTUK CARD QUIZ
+              // Container untuk card quiz yang bisa di-scroll horizontal
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
                     children: [
-                      // CARD 1: Soal Umum Informatika
+                      // Card Quiz 1: Soal Umum Informatika
                       SizedBox(
-                        width: 200, // Lebar card sama
-                        height: 150, // Tinggi card sama
+                        width: 200,
+                        height: 150,
                         child: Card(
                           elevation: 4,
                           child: Column(
@@ -104,6 +115,7 @@ class HomeScreen extends StatelessWidget {
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 10),
+                              // Tombol untuk memulai quiz
                               ElevatedButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -123,11 +135,11 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(width: 16), // Jarak antar card
-                      // CARD 2: Soal Manajemen Informatika dan Vokasi
+                      const SizedBox(width: 16), // Jarak antar card quiz
+                      // Card Quiz 2: Soal Manajemen Informatika dan Vokasi
                       SizedBox(
-                        width: 200, // Lebar card sama
-                        height: 150, // Tinggi card sama
+                        width: 200,
+                        height: 150,
                         child: Card(
                           elevation: 4,
                           child: Column(
@@ -139,6 +151,7 @@ class HomeScreen extends StatelessWidget {
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 10),
+                              // Tombol untuk memulai quiz
                               ElevatedButton(
                                 onPressed: () {
                                   Navigator.push(

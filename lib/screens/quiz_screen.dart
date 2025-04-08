@@ -58,12 +58,7 @@ class QuizScreenState extends State<QuizScreen> {
     {
       'question':
           'Bahasa pemrograman apa yang banyak digunakan untuk pengembangan website?',
-      'options': [
-        'a) Java',
-        'b) Python',
-        'c) C++',
-        'd) JavaScript',
-      ],
+      'options': ['a) Java', 'b) Python', 'c) C++', 'd) JavaScript'],
       'answer': 'd) JavaScript',
     },
   ];
@@ -144,9 +139,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Jalan Raya Ketintang, Kec. Gayungan, Kota Surabaya',
         'b) Jalan Raya Darmo, Surabaya',
         'c) Jalan Raya Gubeng, Surabaya',
-        'd) Jalan Raya Merr, Surabaya'
+        'd) Jalan Raya Merr, Surabaya',
       ],
-      'answer': 'a) Jalan Raya Ketintang, Kec. Gayungan, Kota Surabaya'
+      'answer': 'a) Jalan Raya Ketintang, Kec. Gayungan, Kota Surabaya',
     },
     {
       'question':
@@ -155,9 +150,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Teknologi Virtual Reality (VR)',
         'b) Perangkat keras komputer baru',
         'c) Metode pembelajaran tradisional',
-        'd) Sistem operasi baru'
+        'd) Sistem operasi baru',
       ],
-      'answer': 'a) Teknologi Virtual Reality (VR)'
+      'answer': 'a) Teknologi Virtual Reality (VR)',
     },
     {
       'question':
@@ -166,10 +161,10 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Mencetak profesional IT yang kompeten dan siap menghadapi tantangan di era digital',
         'b) Mengajarkan sejarah komputer',
         'c) Fokus pada ilmu sosial',
-        'd) Mempelajari bahasa asing'
+        'd) Mempelajari bahasa asing',
       ],
       'answer':
-          'a) Mencetak profesional IT yang kompeten dan siap menghadapi tantangan di era digital'
+          'a) Mencetak profesional IT yang kompeten dan siap menghadapi tantangan di era digital',
     },
     {
       'question':
@@ -178,9 +173,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Pengembang perangkat lunak',
         'b) Ahli sejarah',
         'c) Pustakawan',
-        'd) Guru bahasa'
+        'd) Guru bahasa',
       ],
-      'answer': 'a) Pengembang perangkat lunak'
+      'answer': 'a) Pengembang perangkat lunak',
     },
     {
       'question': 'Apa visi dari Program Studi D4 Manajemen Informatika UNESA?',
@@ -188,10 +183,10 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Menyelenggarakan dan mengelola program studi yang profesional, akuntabel, transparan, dan berdaya saing untuk memperkuat ilmu bidang rekayasa perangkat lunak',
         'b) Menjadi pusat studi sejarah komputer',
         'c) Mengembangkan ilmu sosial dan humaniora',
-        'd) Fokus pada penelitian linguistik'
+        'd) Fokus pada penelitian linguistik',
       ],
       'answer':
-          'a) Menyelenggarakan dan mengelola program studi yang profesional, akuntabel, transparan, dan berdaya saing untuk memperkuat ilmu bidang rekayasa perangkat lunak'
+          'a) Menyelenggarakan dan mengelola program studi yang profesional, akuntabel, transparan, dan berdaya saing untuk memperkuat ilmu bidang rekayasa perangkat lunak',
     },
     {
       'question':
@@ -200,10 +195,10 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Implementasi Scratch sebagai media pembelajaran interaktif di SDN Hangtuah 7 Surabaya',
         'b) Mengadakan seminar tentang sejarah komputer',
         'c) Pelatihan memasak untuk ibu rumah tangga',
-        'd) Workshop seni lukis'
+        'd) Workshop seni lukis',
       ],
       'answer':
-          'a) Implementasi Scratch sebagai media pembelajaran interaktif di SDN Hangtuah 7 Surabaya'
+          'a) Implementasi Scratch sebagai media pembelajaran interaktif di SDN Hangtuah 7 Surabaya',
     },
     {
       'question':
@@ -212,9 +207,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Kegiatan Dosen',
         'b) Berita Olahraga',
         'c) Resep Masakan',
-        'd) Tips Kesehatan'
+        'd) Tips Kesehatan',
       ],
-      'answer': 'a) Kegiatan Dosen'
+      'answer': 'a) Kegiatan Dosen',
     },
     {
       'question':
@@ -223,9 +218,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) d4mi@unesa.ac.id',
         'b) info@unesa.ac.id',
         'c) admin@unesa.ac.id',
-        'd) contact@unesa.ac.id'
+        'd) contact@unesa.ac.id',
       ],
-      'answer': 'a) d4mi@unesa.ac.id'
+      'answer': 'a) d4mi@unesa.ac.id',
     },
     {
       'question':
@@ -234,9 +229,9 @@ class QuizScreenState extends State<QuizScreen> {
         'a) Juara 2 di PIMNAS 37 Kategori Poster PKM-VGK',
         'b) Juara lomba memasak tingkat nasional',
         'c) Memenangkan kompetisi tari tradisional',
-        'd) Juara lomba fotografi'
+        'd) Juara lomba fotografi',
       ],
-      'answer': 'a) Juara 2 di PIMNAS 37 Kategori Poster PKM-VGK'
+      'answer': 'a) Juara 2 di PIMNAS 37 Kategori Poster PKM-VGK',
     },
   ];
 
@@ -276,8 +271,9 @@ class QuizScreenState extends State<QuizScreen> {
       ),
       body: Center(
         child: Padding(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 16.0), // Jarak horizontal
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16.0,
+          ), // Jarak horizontal
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -306,21 +302,23 @@ class QuizScreenState extends State<QuizScreen> {
               const SizedBox(height: 20),
               ..._currentQuestions[_currentQuestionIndex]['options']
                   .map<Widget>((option) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 8.0), // Jarak antar jawaban
-                  child: Card(
-                    elevation: 4,
-                    child: SizedBox(
-                      width: double.infinity, // Lebar penuh
-                      child: ElevatedButton(
-                        onPressed: () => _nextQuestion(option),
-                        child: Text(option),
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 8.0,
+                      ), // Jarak antar jawaban
+                      child: Card(
+                        elevation: 4,
+                        child: SizedBox(
+                          width: double.infinity, // Lebar penuh
+                          child: ElevatedButton(
+                            onPressed: () => _nextQuestion(option),
+                            child: Text(option),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                );
-              }).toList(),
+                    );
+                  })
+                  .toList(),
             ],
           ),
         ),
